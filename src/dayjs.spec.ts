@@ -1,6 +1,11 @@
 import dayjs from './dayjs'
 
 describe('dayjs', () => {
+  it('timezone conversion', () => {
+    const date = dayjs.tz('Apr 21, 2023', 'MMM D, YYYY', 'America/Los_Angeles')
+    const utcDate = date.utc()
+    expect({ date: date.format(), utcDate: utcDate.format() }).toEqual({})
+  })
   it('unix time', () => {
     expect(dayjs().utc().startOf('hour').toISOString()).toStrictEqual(dayjs.utc().startOf('hour').toISOString())
     expect(dayjs('2023-05-26T08:30:46Z').utc().startOf('day').toISOString()).toEqual('2023-05-26T00:00:00.000Z')
@@ -27,6 +32,5 @@ describe('dayjs', () => {
 
   it('compare dates', () => {
     expect(dayjs('30-12-2023').isValid()).toBe(false)
-
   })
 })

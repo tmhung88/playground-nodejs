@@ -6,6 +6,7 @@ import timezone from 'dayjs/plugin/timezone'
 import isoWeek from 'dayjs/plugin/isoWeek'
 import isBetween from 'dayjs/plugin/isBetween'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
 
 // initialize dayjs
 dayjs.extend(weekOfYear)
@@ -15,5 +16,6 @@ dayjs.extend(timezone)
 dayjs.extend(isoWeek)
 dayjs.extend(isBetween)
 dayjs.extend(isSameOrAfter)
+dayjs.extend(customParseFormat)
 
 export default dayjs
