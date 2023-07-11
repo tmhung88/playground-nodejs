@@ -43,6 +43,7 @@
     "axios": "^1.4.0",
     "dayjs": "^1.11.7",
     "decimal.js": "^10.4.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "serialize-error": "^8.1.0"
   }
 }
