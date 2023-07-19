@@ -45,6 +45,8 @@
     "dayjs": "^1.11.7",
     "decimal.js": "^10.4.3",
     "lodash": "^4.17.21",
+    "p-limit": "^3.1.0",
+    "p-queue": "^6.6.2",
     "serialize-error": "^8.1.0",
     "stream-json": "^1.8.0"
   }
