@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`papaparse unparse() unparse json arrays with the given column fields 1`] = `
+"userId,username,country
+20738741-d71b-4017-ba62-543bb9801c03,Zoila_Swift,Norfolk Island
+f9987ec1-b671-40f5-b3c4-c193f323aea8,Luna89,Mexico
+f6d988d5-9f7e-4846-915a-a9632baffebd,Robert.Labadie82,United Arab Emirates
+204d73c8-2071-40ca-896c-99944e58dc3e,Mariam18,Colombia
+c7ee8170-43b0-4f61-bd3d-3d297934c324,Una16,Eswatini
+970dbe55-9d79-47c6-9ebc-8fcf4bb17a02,Telly96,Lithuania"
+`;
