@@ -43,8 +43,10 @@
   "dependencies": {
     "@types/stream-json": "^1.7.3",
     "axios": "^1.4.0",
+    "bson": "^5.4.0",
     "dayjs": "^1.11.7",
     "decimal.js": "^10.4.3",
+    "fflate": "^0.8.0",
     "lodash": "^4.17.21",
     "p-limit": "^3.1.0",
     "p-queue": "^6.6.2",
