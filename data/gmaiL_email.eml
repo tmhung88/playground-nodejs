@@ -1,0 +1,19 @@
+MIME-Version: 1.0
+Date: Thu, 3 Aug 2023 14:12:01 +0700
+Message-ID: <CAOdsiauYW4SsRG9c7EjNbcuYHbd04Yf11OEtohTEDBvatefzpQ@mail.gmail.com>
+Subject: Hello Subject
+From: Hung Tran <hung.tran@aaa.com>
+To: someone@bbbb.com
+Content-Type: multipart/alternative; boundary="00000000000016592c0601ff7f32"
+
+--00000000000016592c0601ff7f32
+Content-Type: text/plain; charset="UTF-8"
+
+Hello email content!
+
+--00000000000016592c0601ff7f32
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Hello email content!</div>
+
+--00000000000016592c0601ff7f32--
