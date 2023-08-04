@@ -4,7 +4,10 @@ describe('dayjs', () => {
   it('timezone conversion', () => {
     const date = dayjs.tz('Apr 21, 2023', 'MMM D, YYYY', 'America/Los_Angeles')
     const utcDate = date.utc()
-    expect({ date: date.format(), utcDate: utcDate.format() }).toEqual({})
+    expect({ date: date.format(), utcDate: utcDate.format() }).toEqual({
+      date: '2023-04-21T00:00:00-07:00',
+      utcDate: '2023-04-21T07:00:00Z',
+    })
   })
   it('unix time', () => {
     expect(dayjs().utc().startOf('hour').toISOString()).toStrictEqual(dayjs.utc().startOf('hour').toISOString())
@@ -21,13 +24,12 @@ describe('dayjs', () => {
     expect({
       day: date.date(),
       month: date.month(),
-      year: date.year()
+      year: date.year(),
+    }).toEqual({
+      day: 4,
+      month: 11,
+      year: 2022,
     })
-      .toEqual({
-        day: 4,
-        month: 11,
-        year: 2022
-      })
   })
 
   it('compare dates', () => {

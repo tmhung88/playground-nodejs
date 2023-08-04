@@ -1,10 +1,10 @@
-import * as streamChain from 'stream-chain'
 import fs from 'fs'
-import zlib from 'zlib'
 import stream from 'stream'
+import * as streamChain from 'stream-chain'
 import { parser } from 'stream-json'
 import { streamArray } from 'stream-json/streamers/StreamArray'
 import Batch from 'stream-json/utils/Batch'
+import zlib from 'zlib'
 
 describe('json-stream', () => {
   it('should batch items', async () => {
@@ -13,7 +13,7 @@ describe('json-stream', () => {
       zlib.createGunzip(),
       parser(),
       streamArray(),
-      new Batch({ batchSize: 40 })
+      new Batch({ batchSize: 40 }),
     ])
 
     let actualRowCount = 0
@@ -29,11 +29,13 @@ describe('json-stream', () => {
       stream.Readable.from(Buffer.from(input.buffer)),
       zlib.createGunzip(),
       parser(),
-      streamArray()
+      streamArray(),
     ])
 
     let rowCount = 0
     pipeline.on('data', () => rowCount++)
-    pipeline.on('end', () => { expect(rowCount).toStrictEqual(500) })
+    pipeline.on('end', () => {
+      expect(rowCount).toStrictEqual(500)
+    })
   })
 })

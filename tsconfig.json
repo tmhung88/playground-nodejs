@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "target": "es2017",
     "baseUrl": "./",
+    "strictPropertyInitialization": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "resolveJsonModule": true,

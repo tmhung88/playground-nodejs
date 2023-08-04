@@ -1,5 +1,5 @@
-import fs from 'fs'
 import * as fflate from 'fflate'
+import fs from 'fs'
 
 describe('keepa', () => {
   it('decode product details from browser cache', () => {
@@ -13,6 +13,8 @@ describe('keepa', () => {
     // deserialize the content to get a Product object
     // https://keepa.com/#!discuss/t/product-object/116
     const asin = JSON.parse(asinContent)
-    expect(asin.title).toStrictEqual('Ultimate Artisan Banneton Bread Proofing Basket Set of 2 - Round & Oval Rattan Proofing Baskets, Dough Scraper, Recipe Book - Sourdough Bread Baking Supplies - Perfect Bread Making Tools and Supplies')
+    expect(asin.title).toStrictEqual(
+      'Ultimate Artisan Banneton Bread Proofing Basket Set of 2 - Round & Oval Rattan Proofing Baskets, Dough Scraper, Recipe Book - Sourdough Bread Baking Supplies - Perfect Bread Making Tools and Supplies',
+    )
   })
 })

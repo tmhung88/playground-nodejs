@@ -1,5 +1,5 @@
-import { simpleParser } from 'mailparser'
 import fs from 'fs'
+import { simpleParser } from 'mailparser'
 
 describe('mailparser', () => {
   describe('simpleParser', () => {
@@ -10,12 +10,12 @@ describe('mailparser', () => {
       expect(email.subject).toStrictEqual('Hello Subject')
       expect(email.from?.value[0]).toStrictEqual({
         address: 'hung.tran@aaa.com',
-        name: 'Hung Tran'
+        name: 'Hung Tran',
       })
       const recipient = (email.to as { value: unknown[] }).value[0]
       expect(recipient).toStrictEqual({
         address: 'someone@bbbb.com',
-        name: ''
+        name: '',
       })
     })
   })

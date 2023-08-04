@@ -10,7 +10,7 @@ describe(axios, () => {
       const params = {
         name: 'world',
         postalCode: null,
-        country: undefined
+        country: undefined,
       }
       const response = await axios.get('https://api.agify.io/', { params })
       expect(response.request.path).toStrictEqual('/?name=world')

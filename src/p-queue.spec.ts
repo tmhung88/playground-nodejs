@@ -1,5 +1,5 @@
-import PQueue from 'p-queue'
 import { range } from 'lodash'
+import PQueue from 'p-queue'
 
 describe('p-queue', () => {
   it('execute a max of certain promises at a time', async () => {
@@ -10,7 +10,7 @@ describe('p-queue', () => {
     const delay = 20
     const promises = range(0, maxLoop).map(async () => {
       await queue.add(async () => {
-        await new Promise(resolve => setTimeout(resolve, delay))
+        await new Promise((resolve) => setTimeout(resolve, delay))
         counter++
       })
     })

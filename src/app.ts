@@ -1,6 +1,6 @@
 import PQueue from 'p-queue'
 
-async function main (): Promise<void> {
+async function main(): Promise<void> {
   const queue = new PQueue({ concurrency: 2 })
   const queuePromise = []
   const start = Date.now()
@@ -17,7 +17,7 @@ async function main (): Promise<void> {
       } else {
         waitTime = 4000 * (i % 3)
       }
-      await new Promise(resolve => setTimeout(resolve, waitTime))
+      await new Promise((resolve) => setTimeout(resolve, waitTime))
       console.log(`complete ${i} - ${Math.round((Date.now() - start) / 1000)}`)
     })
 

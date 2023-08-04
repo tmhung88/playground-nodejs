@@ -1,12 +1,12 @@
 import dayjs from 'dayjs'
-import weekYear from 'dayjs/plugin/weekYear'
-import weekOfYear from 'dayjs/plugin/weekOfYear'
-import utc from 'dayjs/plugin/utc'
-import timezone from 'dayjs/plugin/timezone'
-import isoWeek from 'dayjs/plugin/isoWeek'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
 import isBetween from 'dayjs/plugin/isBetween'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
+import isoWeek from 'dayjs/plugin/isoWeek'
+import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
+import weekOfYear from 'dayjs/plugin/weekOfYear'
+import weekYear from 'dayjs/plugin/weekYear'
 
 // initialize dayjs
 dayjs.extend(weekOfYear)
