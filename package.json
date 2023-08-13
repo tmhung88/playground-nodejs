@@ -36,6 +36,7 @@
     "typescript": "~5.0.4"
   },
   "dependencies": {
+    "@lifeomic/attempt": "^3.0.3",
     "@types/stream-json": "^1.7.3",
     "axios": "^1.4.0",
     "bson": "^5.4.0",

@@ -10,6 +10,8 @@ describe(URL, () => {
     url.searchParams.append('state', 'UK-VENDOR')
     url.searchParams.append('scope', 'advertising::campaign_management advertising::test:create_account')
 
-    expect(url.href).toStrictEqual('https://eu.account.amazon.com/ap/oa?client_id=amzn1.application-oa2-client.111111111111111111111111111111111&redirect_uri=http%3A%2F%2Flocalhost%3A0000%2Fcallback&response_type=code&state=UK-VENDOR&scope=advertising%3A%3Acampaign_management+advertising%3A%3Atest%3Acreate_account')
+    expect(url.href).toStrictEqual(
+      'https://eu.account.amazon.com/ap/oa?client_id=amzn1.application-oa2-client.111111111111111111111111111111111&redirect_uri=http%3A%2F%2Flocalhost%3A0000%2Fcallback&response_type=code&state=UK-VENDOR&scope=advertising%3A%3Acampaign_management+advertising%3A%3Atest%3Acreate_account',
+    )
   })
 })
