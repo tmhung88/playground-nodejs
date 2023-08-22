@@ -1,7 +1,9 @@
+const { defaults: tsjPreset } = require('ts-jest/presets')
+
 module.exports = {
   moduleFileExtensions: ['ts', 'js'],
   transform: {
-    '^.+\\.tsx?$': '@swc/jest',
+    ...tsjPreset.transform,
   },
   coverageDirectory: '<rootDir>/../coverage',
   testRegex: '.*\\.spec\\.ts$',

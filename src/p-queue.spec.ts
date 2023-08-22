@@ -8,13 +8,13 @@ describe('p-queue', () => {
     let counter = 0
     const maxLoop = 10
     const delay = 20
-    const promises = range(0, maxLoop).map(async () => {
+    range(0, maxLoop).map(async () => {
       await queue.add(async () => {
         await new Promise((resolve) => setTimeout(resolve, delay))
         counter++
       })
     })
-    await Promise.all(promises)
+    await queue.onIdle()
     expect(counter).toStrictEqual(maxLoop)
     expect(Date.now() - start).toBeGreaterThan(maxLoop * delay)
   })
