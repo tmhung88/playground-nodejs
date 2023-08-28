@@ -71,4 +71,25 @@ describe('papaparse', () => {
       expect(csvData).toMatchSnapshot()
     })
   })
+
+  describe('parse', () => {
+    it('parse csv data', () => {
+      const content = `Date   , Visitor , ViewCount
+      2023-01-05, peter@email.lcom, 15`
+      const parseCsvResult = Papa.parse(content, {
+        header: true,
+        skipEmptyLines: true,
+        transformHeader(header: string, index: number): string {
+          return header.trim()
+        },
+      })
+      expect([
+        {
+          Date: '      2023-01-05',
+          Visitor: ' peter@email.lcom',
+          ViewCount: ' 15',
+        },
+      ])
+    })
+  })
 })

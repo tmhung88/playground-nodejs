@@ -41,7 +41,8 @@
     "@types/stream-json": "^1.7.3",
     "axios": "^1.4.0",
     "bson": "^5.4.0",
-    "dayjs": "^1.11.7",
+    "class-transformer": "^0.5.1",
+    "dayjs": "1.11.6",
     "decimal.js": "^10.4.3",
     "dotenv": "^16.3.1",
     "fflate": "^0.8.0",
@@ -55,7 +56,8 @@
     "reflect-metadata": "^0.1.13",
     "serialize-error": "^8.1.0",
     "stream-json": "^1.8.0",
-    "typeorm": "^0.3.17"
+    "typeorm": "^0.3.17",
+    "winston": "^3.10.0"
   },
   "packageManager": "yarn@3.6.3",
   "husky": {
@@ -64,6 +66,9 @@
     }
   },
   "lint-staged": {
-    "***/*.{js,cjs,mjs,ts}": ["rome format --write", "rome check --apply-unsafe"]
+    "***/*.{js,cjs,mjs,ts}": [
+      "rome format --write",
+      "rome check --apply-unsafe"
+    ]
   }
 }

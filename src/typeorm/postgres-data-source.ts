@@ -78,6 +78,6 @@ export async function executeSqlFn<T>(sqlFunc: SqlFunc<T>): Promise<T> {
     await AppDataSource.initialize()
     return await sqlFunc(AppDataSource)
   } finally {
-    await AppDataSource.destroy()
+    // await AppDataSource.destroy()
   }
 }

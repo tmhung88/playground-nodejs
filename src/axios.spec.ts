@@ -38,7 +38,7 @@ describe(axios, () => {
       const responseTime = Number((hrtime.bigint() - startTime) / BigInt(1_000_000))
       ;(response as CustomResponse).stats = {
         responseTime,
-        path: `${request.method} ${request.path}`,
+        path: `${request.method} ${request.path.split('?')[0]}`,
         host: request.host,
         responseStatus: response.status,
       }
@@ -70,7 +70,7 @@ describe(axios, () => {
       }
       const response = await axiosInstance.get('https://api.agify.io/', { params })
       const stats = (response as CustomResponse).stats
-      expect(stats.path).toStrictEqual('GET /?name=world')
+      expect(stats.path).toStrictEqual('GET /')
       expect(stats.host).toStrictEqual('api.agify.io')
       expect(stats.responseStatus).toStrictEqual(200)
       expect(stats.responseTime).toBeGreaterThan(500)
