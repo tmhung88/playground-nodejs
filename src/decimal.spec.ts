@@ -13,4 +13,8 @@ describe('decimal.js', () => {
     expect(Decimal.div(0.02, 0.1).toNumber()).toEqual(0.2)
     expect(0.02 / 0.1).toEqual(0.19999999999999998)
   })
+
+  it('rounding', () => {
+    expect(new Decimal(1.33333).toDecimalPlaces(2, Decimal.ROUND_HALF_UP).toNumber()).toEqual(1.33)
+  })
 })

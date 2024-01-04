@@ -32,7 +32,20 @@ describe('dayjs', () => {
     })
   })
 
+  it('construct', () => {
+    expect(dayjs.utc('9/1/2023', 'M/D/YYYY').toISOString()).toBe('2023-09-01T00:00:00.000Z')
+    expect(dayjs.utc('12/15/2023', 'M/D/YYYY').toISOString()).toBe('2023-12-15T00:00:00.000Z')
+  })
+
   it('compare dates', () => {
     expect(dayjs('30-12-2023').isValid()).toBe(false)
+  })
+
+  it('validation', () => {
+    expect(dayjs(undefined, 'YYYY-MM-DD', true).utc().isValid()).toBe(true)
+  })
+
+  it('subtract', () => {
+    expect(dayjs('2023-12-22').subtract(95, 'day').format()).toStrictEqual('2023-09-18T00:00:00+07:00')
   })
 })
